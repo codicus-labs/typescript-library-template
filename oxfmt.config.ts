@@ -1,0 +1,8 @@
+import { defineConfig } from "oxfmt";
+
+export default defineConfig({
+  tabWidth: 2,
+  ignorePatterns: [".memory/**"],
+  sortPackageJson: true,
+  sortImports: true,
+});
