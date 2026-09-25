@@ -1,8 +1,8 @@
 {
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "types": ["node", "vitest/globals"],
-    "tsBuildInfoFile": "../node_modules/.cache/tsconfig.tests.tsbuildinfo"
-  },
-  "include": ["../src/**/*.spec.ts", "../tests/**/*.spec.ts"]
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "types": ["node"],
+        "tsBuildInfoFile": "../node_modules/.cache/tsconfig.tests.tsbuildinfo"
+    },
+    "include": ["../src/**/*.spec.ts", "../tests/**/*.ts"]
 }

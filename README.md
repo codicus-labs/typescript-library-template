@@ -1,6 +1,6 @@
-# Structa
+# Your Library Name
 
-Local-first, structured memory from unstructured input. The first validation domain will be Personal Object Memory; this repository currently contains only the project foundation, not the extraction or persistence pipeline.
+A TypeScript library template. Replace `your-library-name` in `package.json` and this title with your library's name, then describe its purpose here. The package is private by default; remove `"private": true` when you are ready to publish.
 
 ## Development
 
@@ -8,10 +8,11 @@ Use Node 24.21.0 (see `.node-version`) and pnpm 12.4.2.
 
 ```sh
 pnpm install --frozen-lockfile
+pnpm build
 pnpm check
 pnpm dev
 ```
 
-`pnpm check` runs TypeScript, type-aware Oxlint, Oxfmt, Knip and Vitest in parallel. GitHub Actions builds the ESM library with tsdown before running these checks. `tsconfig.json` references separate projects for code, colocated `*.spec.ts` tests and tooling configs. `pnpm format` fixes formatting. The optional pre-commit hook formats and fixes staged files with lint-staged; the commit-msg hook validates commit messages with commitlint. Enable them locally with `pnpm hooks:install`. `pnpm dev` runs `src/dev.ts` in Node watch mode; it currently only prints a status message. The public `src/index.ts` entry point currently exports only a demo `greet` function. The package remains private until its real public API is implemented. No model or database server is required for these checks.
+`pnpm build` creates an ESM bundle and declarations with tsdown. `pnpm check` runs TypeScript, type-aware Oxlint, Oxfmt, Knip and Vitest. GitHub Actions builds before running the checks. Tests can be colocated as `*.spec.ts`; `src/index.spec.ts` tests the demo public API. `src/index.ts` exports a demo `greet` function; replace it with your public API. `pnpm dev` runs `src/dev.ts` in Node watch mode; replace its status message with your development entry point if needed.
 
-See [setup decisions](docs/setup.md) for the selected stack, research, and the next milestone.
+`pnpm format` fixes formatting. Optional Git hooks run lint-staged on pre-commit and commitlint on commit-msg; enable them with `pnpm hooks:install`.

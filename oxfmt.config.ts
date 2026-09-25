@@ -1,8 +1,15 @@
-import { defineConfig } from "oxfmt";
+import { defineConfig } from 'oxfmt';
 
 export default defineConfig({
-  tabWidth: 2,
-  ignorePatterns: [".memory/**"],
-  sortPackageJson: true,
-  sortImports: true,
+    arrowParens: 'always',
+    endOfLine: 'lf',
+    ignorePatterns: ['.changeset/', '**/.memory/', '**/.svelte-kit/', '**/CHANGELOG.md', '**/dist/'],
+    printWidth: 120,
+    semi: true,
+    singleQuote: true,
+    tabWidth: 4,
+    trailingComma: 'all',
+    useTabs: false,
+    sortPackageJson: true,
+    sortImports: true,
 });

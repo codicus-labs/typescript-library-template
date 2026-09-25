@@ -1,59 +1,56 @@
 {
-  "name": "structa",
-  "private": true,
-  "type": "module",
-  "exports": {
-    ".": "./dist/index.mjs",
-    "./package.json": "./package.json"
-  },
-  "scripts": {
-    "dev": "node --watch src/dev.ts",
-    "build": "tsdown",
-    "typecheck": "tsc -p configs/tsconfig.config.json && tsc -p configs/tsconfig.tests.json && (test ! -d src || tsc -p configs/tsconfig.code.json)",
-    "lint": "oxlint .",
-    "format": "oxfmt .",
-    "format:check": "oxfmt --check .",
-    "unused": "knip",
-    "hooks:install": "git config core.hooksPath .githooks",
-    "test": "vitest run",
-    "check": "pnpm run '/^(typecheck|lint|format:check|unused|test)$/'"
-  },
-  "dependencies": {
-    "zod": "^4.6.5"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^21.2.3",
-    "@commitlint/config-conventional": "^21.2.3",
-    "@types/node": "^24.0.0",
-    "knip": "^6.37.0",
-    "lint-staged": "^17.5.1",
-    "oxfmt": "^0.70.0",
-    "oxlint": "^1.85.0",
-    "oxlint-tsgolint": "^7.0.2002",
-    "tsdown": "^0.23.0",
-    "typescript": "^7.0.2",
-    "vitest": "^5.0.1"
-  },
-  "lint-staged": {
-    "*.{js,mjs,cjs,ts,mts,cts}": [
-      "oxfmt",
-      "oxlint --fix"
-    ],
-    "*.{json,md,yaml,yml}": "oxfmt"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "engines": {
-    "node": ">=24 <25"
-  },
-  "packageManager": "pnpm@12.4.2",
-  "knip": {
-    "ignoreDependencies": [
-      "@commitlint/cli",
-      "lint-staged"
-    ]
-  }
+    "name": "your-library-name",
+    "private": true,
+    "type": "module",
+    "exports": {
+        ".": "./dist/index.mjs",
+        "./package.json": "./package.json"
+    },
+    "scripts": {
+        "dev": "node --watch src/dev.ts",
+        "build": "tsdown",
+        "typecheck": "tsc -p configs/tsconfig.config.json && tsc -p configs/tsconfig.tests.json && (test ! -d src || tsc -p configs/tsconfig.app.json)",
+        "lint": "oxlint .",
+        "format": "oxfmt .",
+        "format:check": "oxfmt --check .",
+        "unused": "knip",
+        "hooks:install": "git config core.hooksPath .githooks",
+        "test": "vitest run",
+        "check": "pnpm run '/^(typecheck|lint|format:check|unused|test)$/'"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^21.2.3",
+        "@commitlint/config-conventional": "^21.2.3",
+        "@types/node": "^24.0.0",
+        "knip": "^6.37.0",
+        "lint-staged": "^17.5.1",
+        "oxfmt": "^0.70.0",
+        "oxlint": "^1.85.0",
+        "oxlint-tsgolint": "^7.0.2002",
+        "tsdown": "^0.23.0",
+        "typescript": "^7.0.2",
+        "vitest": "^5.0.1"
+    },
+    "lint-staged": {
+        "*.{js,mjs,cjs,ts,mts,cts}": [
+            "oxfmt",
+            "oxlint --fix"
+        ],
+        "*.{json,md,yaml,yml}": "oxfmt"
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
+    "engines": {
+        "node": ">=24 <25"
+    },
+    "packageManager": "pnpm@12.4.2",
+    "knip": {
+        "ignoreDependencies": [
+            "@commitlint/cli",
+            "lint-staged"
+        ]
+    }
 }

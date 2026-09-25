@@ -1,1 +1,1 @@
-console.log("Structa dev mode");
+console.log('Development mode');
