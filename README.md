@@ -10,9 +10,8 @@ Use Node 24.21.0 (see `.node-version`) and pnpm 12.4.2.
 pnpm install --frozen-lockfile
 pnpm build
 pnpm check
-pnpm dev
 ```
 
-`pnpm build` creates an ESM bundle and declarations with tsdown. `pnpm check` runs TypeScript, type-aware Oxlint, Oxfmt, Knip and Vitest. GitHub Actions builds before running the checks. Tests can be colocated as `*.spec.ts`; `src/index.spec.ts` tests the demo public API. `src/index.ts` exports a demo `greet` function; replace it with your public API. `pnpm dev` runs `src/dev.ts` in Node watch mode; replace its status message with your development entry point if needed.
+`pnpm build` creates an ESM bundle and declarations with tsdown. `pnpm check` runs TypeScript, type-aware Oxlint, Oxfmt, Knip and Vitest. Oxlint, Oxfmt and the TypeScript base config come from `@codicus/configs`; pnpm's installation policy comes from `@codicus/pnpm-plugin-configs`. GitHub Actions builds before running the checks. Tests can be colocated as `*.spec.ts`; `src/index.spec.ts` tests the demo public API. `src/index.ts` exports a demo `greet` function; replace it with your public API.
 
 `pnpm format` fixes formatting. Optional Git hooks run lint-staged on pre-commit and commitlint on commit-msg; enable them with `pnpm hooks:install`.

@@ -1,2 +1,4 @@
+configDependencies:
+    '@codicus/pnpm-plugin-configs': 0.1.0
 engineStrict: true
 trustPolicy: no-downgrade

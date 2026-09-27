@@ -4,13 +4,19 @@ lockfileVersion: '9.0'
 importers:
 
   .:
-    configDependencies: {}
+    configDependencies:
+      '@codicus/pnpm-plugin-configs':
+        specifier: 0.1.0
+        version: 0.1.0
     packageManagerDependencies:
       pnpm:
         specifier: 12.4.2
         version: 12.4.2
 
 packages:
+
+  '@codicus/pnpm-plugin-configs@0.1.0':
+    resolution: {integrity: sha512-7JRfUw2CsG0+p2hjfGcmSuv0ku6agOBwqzPEElgpva+a24XOeUFA15U+ixQGxThnWDS2TxhHhjt8XU0DY8Y9OA==}
 
   '@pnpm/exe.android-arm64@12.4.2':
     resolution: {integrity: sha512-E255MbcQ0V1577M2BV0ajWuP7KmTPYA0jqZnk3rK6Lq3kTvZWulMMb7iqRmnLsQbyWTkMEB2CfyM70loVDA8xg==}
@@ -96,6 +102,8 @@ packages:
 
 snapshots:
 
+  '@codicus/pnpm-plugin-configs@0.1.0': {}
+
   '@pnpm/exe.android-arm64@12.4.2':
     optional: true
 
@@ -166,6 +174,9 @@ importers:
 
   .:
     devDependencies:
+      '@codicus/configs':
+        specifier: 0.7.0
+        version: 0.7.0(@types/node@24.13.6)(oxfmt@0.70.0)(oxlint-tsgolint@7.0.2002)(oxlint@1.85.0(oxlint-tsgolint@7.0.2002))(typescript@7.0.2)
       '@commitlint/cli':
         specifier: ^21.2.3
         version: 21.2.3(@types/node@24.13.6)(conventional-commits-parser@7.1.2)(typescript@7.0.2)
@@ -209,6 +220,27 @@ packages:
   '@babel/helper-validator-identifier@7.29.7':
     resolution: {integrity: sha512-qehxGkRj55h/ff8EMaJ+cYhyaKlHIxqYDn682wQD7RNp9UujOQsHog2uS0r2vzr4pW+sXf90NeeayjcNaX3fFg==}
     engines: {node: '>=6.9.0'}
+
+  '@codicus/configs@0.7.0':
+    resolution: {integrity: sha512-3LRuBfr7eJvaH7qtb6A1zujaLCq4+y73GeppF8iCQsbjK3GJ8Hoaz/3hdPLsFVkMYyJZF6xWbRjOawDQ/tUodA==}
+    engines: {node: '>=24'}
+    peerDependencies:
+      '@types/node': '>=24 <27'
+      oxfmt: '>=0.64 <1'
+      oxlint: '>=1.79 <2'
+      oxlint-tsgolint: '>=7 <8'
+      typescript: '>=5.9 <8'
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      oxfmt:
+        optional: true
+      oxlint:
+        optional: true
+      oxlint-tsgolint:
+        optional: true
+      typescript:
+        optional: true
 
   '@commitlint/cli@21.2.3':
     resolution: {integrity: sha512-5yOX6IRjcrIReCxpyAd04hgI/yhUMpVBJ/ouwFV0wk9yx5+fYRDWZWJ5h55Tbedgfol+5m2mU5nqzbB8g3v0vQ==}
@@ -932,6 +964,9 @@ packages:
   '@simple-libs/stream-utils@2.0.0':
     resolution: {integrity: sha512-fCTuZK4QBa+39Oz9l4OGfJfz+GpwCp3AqO7Zch3to99xHPgstVsRFpeQ8LNd2o1Gv8raL2mCFwiaHh7bFSp5DQ==}
     engines: {node: '>=22'}
+
+  '@tsconfig/node24@24.0.5':
+    resolution: {integrity: sha512-DWC54fGPuhZgg3Ighg4Y/A/bA3ZdB5hnzAuv/MkQ/X85sVsBsMQxu8t7khutdYeiNksBbFdDyeqv1HSW2Zl8aA==}
 
   '@tybys/wasm-util@0.10.4':
     resolution: {integrity: sha512-W3c4gRigFS0T/Ma4qIYF3GDAc5AQdHb1yL5znJT1Zv1YaD9Kitx656wBjvr19qbiosmZT8lWDM5BEMynUqX65A==}
@@ -1887,6 +1922,16 @@ snapshots:
 
   '@babel/helper-validator-identifier@7.29.7': {}
 
+  '@codicus/configs@0.7.0(@types/node@24.13.6)(oxfmt@0.70.0)(oxlint-tsgolint@7.0.2002)(oxlint@1.85.0(oxlint-tsgolint@7.0.2002))(typescript@7.0.2)':
+    dependencies:
+      '@tsconfig/node24': 24.0.5
+    optionalDependencies:
+      '@types/node': 24.13.6
+      oxfmt: 0.70.0
+      oxlint: 1.85.0(oxlint-tsgolint@7.0.2002)
+      oxlint-tsgolint: 7.0.2002
+      typescript: 7.0.2
+
   '@commitlint/cli@21.2.3(@types/node@24.13.6)(conventional-commits-parser@7.1.2)(typescript@7.0.2)':
     dependencies:
       '@commitlint/config-conventional': 21.2.3
@@ -2346,6 +2391,8 @@ snapshots:
       '@simple-libs/stream-utils': 2.0.0
 
   '@simple-libs/stream-utils@2.0.0': {}
+
+  '@tsconfig/node24@24.0.5': {}
 
   '@tybys/wasm-util@0.10.4':
     dependencies:
